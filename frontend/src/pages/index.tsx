@@ -51,69 +51,82 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 🌟 How It Works Section */}
       <section className="text-center py-16 bg-background text-white">
-      <h2 className="text-4xl font-display text-[#8B817A]">HOW IT WORKS</h2>
-      <BentoGrid className="mt-8 max-w-5xl mx-auto">
-        <BentoCard
-          name="Step 1"
-          description="Upload an image of your skin"
-          href="#"
-          cta="Step 1: Upload an image of your skin"
-          className="col-span-1 border border-white/20 rounded-lg p-4 hover:bg-white hover:text-brand-dark transition"
-          background={
-            <Image
-              src="/luvera-pic2.png"
-              alt="Step 1"
-              width={256}
-              height={256}
-              className="rounded-lg"
-            />
-          }
-        />
-        <BentoCard
-          name="Step 2"
-          description="AI analyzes your skin condition"
-          href="#"
-          cta="Step 2: AI analyzes your skin"
-          className="col-span-1 border border-white/20 rounded-lg p-4 hover:bg-white hover:text-brand-dark transition"
-          background={
-            <Image
-              src="/luvera-pic3.png"
-              alt="Step 2"
-              width={256}
-              height={256}
-              className="rounded-lg"
-            />
-          }
-        />
-        <BentoCard
-          name="Step 3"
-          description="Receive personalized skincare recommendations"
-          href="/routines"
-          cta="Step 3: Get your skincare routine"
-          className="col-span-1 border border-white/20 rounded-lg p-4 hover:bg-white hover:text-brand-dark transition"
-          background={
-            <Image
-              src="/luvera-pic4.png"
-              alt="Step 3"
-              width={256}
-              height={256}
-              className="rounded-lg"
-            />
-          }
-        />
-      </BentoGrid>
-    </section>
+        <h2 className="text-4xl font-display text-[#8B817A]">HOW IT WORKS</h2>
+        <BentoGrid className="mt-8 max-w-5xl mx-auto">
+          <BentoCard
+            name="Step 1"
+            description="Upload an image of your skin"
+            href="#"
+            cta="Step 1: Upload an image of your skin"
+            className="col-span-1 border border-white/20 rounded-lg p-4 hover:bg-white hover:text-brand-dark transition"
+            background={
+              <Image
+                src="/luvera-pic2.png"
+                alt="Step 1"
+                width={256}
+                height={256}
+                className="rounded-lg"
+              />
+            }
+          />
+          <BentoCard
+            name="Step 2"
+            description="AI analyzes your skin condition"
+            href="#"
+            cta="Step 2: AI analyzes your skin"
+            className="col-span-1 border border-white/20 rounded-lg p-4 hover:bg-white hover:text-brand-dark transition"
+            background={
+              <Image
+                src="/luvera-pic3.png"
+                alt="Step 2"
+                width={256}
+                height={256}
+                className="rounded-lg"
+              />
+            }
+          />
+          <BentoCard
+            name="Step 3"
+            description="Receive personalized skincare recommendations"
+            href="/routines"
+            cta="Step 3: Get your skincare routine"
+            className="col-span-1 border border-white/20 rounded-lg p-4 hover:bg-white hover:text-brand-dark transition"
+            background={
+              <Image
+                src="/luvera-pic4.png"
+                alt="Step 3"
+                width={256}
+                height={256}
+                className="rounded-lg"
+              />
+            }
+          />
+        </BentoGrid>
+      </section>
 
+      {/* 🌟 Bottom Section with Fully Responsive Image */}
+      <section className="relative w-full">
+        {/* ✅ Bottom Image (Full Width & Adaptive) */}
+        <Image
+          src="/landing-bottom.png"
+          alt="Skincare Products Background"
+          layout="responsive"
+          width={1440}
+          height={800}
+          className="w-full h-auto object-cover"
+        />
 
-      {/* 🌟 Bottom CTA Section (Restored) */}
-      <section className="bg-brand p-16 text-center text-white rounded-t-[40px]">
-        <h2 className="text-3xl font-display">READY TO GET STARTED?</h2>
-        <Link href="/routines">
-          <button className="mt-5 bg-white text-brand px-6 py-3 rounded-full text-lg font-medium font-sans">
-            head to step 1 →
-          </button>
-        </Link>
+        {/* ✅ CTA Overlay on Image (Centered Responsively) */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-6 md:px-12 lg:px-24">
+          <h2 className="text-3xl md:text-4xl font-display">READY TO GET STARTED?</h2>
+          <Link href="/routines">
+            <button className="mt-5 bg-white text-brand px-6 py-3 rounded-full text-lg font-medium font-sans transition hover:bg-opacity-90">
+              head to step 1 →
+            </button>
+          </Link>
+        </div>
       </section>
     </div>
   );
