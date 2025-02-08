@@ -1,6 +1,6 @@
+import { BentoCard, BentoGrid } from "@/components/BentoGrid";
 import Image from "next/image";
 import Link from "next/link";
-import { BentoGrid, BentoCard } from "@/components/BentoGrid";
 
 export default function Home() {
   return (
@@ -21,7 +21,7 @@ export default function Home() {
       </nav>
 
       {/* 🌟 Hero Section */}
-      <section className="relative flex items-center h-[90vh]">
+      <section className="relative flex items-center h-[100vh]">
         {/* ✅ Background Image */}
         <Image
           src="/luvera-pic1.jpg"
@@ -51,36 +51,60 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 🌟 How It Works Section (Restored) */}
-      <section className="text-center py-16">
-        <h2 className="text-4xl font-display text-brand-dark">HOW IT WORKS</h2>
-        <BentoGrid className="mt-8 max-w-5xl mx-auto">
-          <BentoCard
-            name="Step 1"
-            description="Upload an image of your skin"
-            href="#"
-            cta="Start Now"
-            className="col-span-1"
-            background={<Image src="/luvera-pic2.png" alt="Step 1" width={256} height={256} className="rounded-lg" />}
-          />
-          <BentoCard
-            name="Step 2"
-            description="AI analyzes your skin condition"
-            href="#"
-            cta="Analyze"
-            className="col-span-1"
-            background={<Image src="/luvera-pic3.png" alt="Step 2" width={256} height={256} className="rounded-lg" />}
-          />
-          <BentoCard
-            name="Step 3"
-            description="Receive personalized skincare recommendations"
-            href="/routines"
-            cta="Get Routine"
-            className="col-span-1"
-            background={<Image src="/luvera-pic4.png" alt="Step 3" width={256} height={256} className="rounded-lg" />}
-          />
-        </BentoGrid>
-      </section>
+      <section className="text-center py-16 bg-background text-white">
+      <h2 className="text-4xl font-display text-[#8B817A]">HOW IT WORKS</h2>
+      <BentoGrid className="mt-8 max-w-5xl mx-auto">
+        <BentoCard
+          name="Step 1"
+          description="Upload an image of your skin"
+          href="#"
+          cta="Step 1: Upload an image of your skin"
+          className="col-span-1 border border-white/20 rounded-lg p-4 hover:bg-white hover:text-brand-dark transition"
+          background={
+            <Image
+              src="/luvera-pic2.png"
+              alt="Step 1"
+              width={256}
+              height={256}
+              className="rounded-lg"
+            />
+          }
+        />
+        <BentoCard
+          name="Step 2"
+          description="AI analyzes your skin condition"
+          href="#"
+          cta="Step 2: AI analyzes your skin"
+          className="col-span-1 border border-white/20 rounded-lg p-4 hover:bg-white hover:text-brand-dark transition"
+          background={
+            <Image
+              src="/luvera-pic3.png"
+              alt="Step 2"
+              width={256}
+              height={256}
+              className="rounded-lg"
+            />
+          }
+        />
+        <BentoCard
+          name="Step 3"
+          description="Receive personalized skincare recommendations"
+          href="/routines"
+          cta="Step 3: Get your skincare routine"
+          className="col-span-1 border border-white/20 rounded-lg p-4 hover:bg-white hover:text-brand-dark transition"
+          background={
+            <Image
+              src="/luvera-pic4.png"
+              alt="Step 3"
+              width={256}
+              height={256}
+              className="rounded-lg"
+            />
+          }
+        />
+      </BentoGrid>
+    </section>
+
 
       {/* 🌟 Bottom CTA Section (Restored) */}
       <section className="bg-brand p-16 text-center text-white rounded-t-[40px]">
