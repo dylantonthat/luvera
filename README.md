@@ -38,8 +38,6 @@ Contains all json for products we compiled
 
  - Web Application: Built using modern front-end and back-end technologies.
 
- - Cloud Storage & Security: Ensuring user data remains private and protected.
-
 ### Getting Started
 
 Luvera.club is currently in its beta phase. To try it out:
