@@ -1,0 +1,74 @@
+{
+    "skinConcerns": [
+      {
+        "concern": "Acne",
+        "recommendations": [
+          {
+            "name": "CeraVe Acne Foaming Cleanser",
+            "price": "$14.99",
+            "rating": 4.7,
+            "link": "https://example.com/cerave-acne-cleanser"
+          },
+          {
+            "name": "The Ordinary Niacinamide 10% + Zinc 1% Serum",
+            "price": "$6.50",
+            "rating": 4.8,
+            "link": "https://example.com/ordinary-niacinamide"
+          },
+          {
+            "name": "Paula's Choice BHA Liquid Exfoliant",
+            "price": "$13.00",
+            "rating": 4.9,
+            "link": "https://example.com/paulas-choice-bha"
+          }
+        ]
+      },
+      {
+        "concern": "Dry Skin",
+        "recommendations": [
+          {
+            "name": "Cetaphil Daily Hydrating Lotion",
+            "price": "$12.99",
+            "rating": 4.6,
+            "link": "https://example.com/cetaphil-hydrating-lotion"
+          },
+          {
+            "name": "Eucerin Advanced Repair Cream",
+            "price": "$9.99",
+            "rating": 4.8,
+            "link": "https://example.com/eucerin-repair-cream"
+          },
+          {
+            "name": "La Roche-Posay Toleriane Double Repair Moisturizer",
+            "price": "$19.99",
+            "rating": 4.7,
+            "link": "https://example.com/la-roche-posay-moisturizer"
+          }
+        ]
+      },
+      {
+        "concern": "Hyperpigmentation",
+        "recommendations": [
+          {
+            "name": "Good Molecules Discoloration Correcting Serum",
+            "price": "$12.00",
+            "rating": 4.6,
+            "link": "https://example.com/good-molecules-serum"
+          },
+          {
+            "name": "Ambi Skincare Fade Cream",
+            "price": "$8.99",
+            "rating": 4.5,
+            "link": "https://example.com/ambi-fade-cream"
+          },
+          {
+            "name": "Murad Rapid Dark Spot Correcting Serum",
+            "price": "$25.00",
+            "rating": 4.7,
+            "link": "https://example.com/murad-dark-spot"
+          }
+        ]
+      }
+    ]
+  }
+  
