@@ -1,6 +1,7 @@
-# Luvera.club
+#### Welcome to Luvera.club, your personal skincare companion! 
+Our platform provides personalized skincare recommendations based on AI-powered skin analysis. By submitting three images of your face (front, left, and right), our model determines your skin type and offers tailored product suggestions and routine optimizations to help you achieve healthier skin.
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+### Features
 
 ## Running frontend
 
@@ -15,27 +16,44 @@ cd backend
 
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ - Routine Optimization: Get expert-backed guidance on how to structure your daily skincare routine for maximum effectiveness.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+ - Privacy-Focused: Your uploaded images and data are securely processed and never shared without your consent.
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### How It Works
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+ - Upload Images: Submit three clear photos of your face (front, left side, right side).
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+ - AI Analysis: Our model scans for skin type, blemishes, hydration levels, and other factors.
 
-## Learn More
+ - Get Recommendations: Receive a personalized skincare routine and product suggestions tailored to your needs.
 
-To learn more about Next.js, take a look at the following resources:
+### Technologies Used
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+ - Machine Learning: AI model trained on diverse skin types for accurate analysis.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+ - Web Application: Built using modern front-end and back-end technologies.
 
-## Deploy on Vercel
+ - Cloud Storage & Security: Ensuring user data remains private and protected.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Getting Started
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+Luvera.club is currently in its beta phase. To try it out:
+
+ - Visit *luvera.club*
+
+ - Follow the instructions to upload your images.
+
+ - Get your personalized skincare insights!
+
+### Future Enhancements
+
+ - Progress Tracking: Account feature and ability to monitor your skin improvements over time.
+
+ - Community & Expert Advice: Interact with dermatologists and skincare enthusiasts.
+
+### Contact Us
+
+For feedback, collaborations, or support, reach out to us at support@luvera.club.
+
+*Luvera.club - Smart skincare, tailored for you.*
