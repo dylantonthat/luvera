@@ -1,0 +1,90 @@
+{
+    "steps": [
+      {
+        "step": "Cleanser",
+        "products": [
+          {
+            "name": "CeraVe Hydrating Facial Cleanser",
+            "price": "$14.99",
+            "rating": 4.7,
+            "link": "https://example.com/cerave-cleanser"
+          },
+          {
+            "name": "La Roche-Posay Toleriane Purifying Cleanser",
+            "price": "$15.99",
+            "rating": 4.8,
+            "link": "https://example.com/la-roche-cleanser"
+          }
+        ]
+      },
+      {
+        "step": "Toner",
+        "products": [
+          {
+            "name": "Thayers Witch Hazel Toner",
+            "price": "$10.99",
+            "rating": 4.6,
+            "link": "https://example.com/thayers-toner"
+          },
+          {
+            "name": "Paula's Choice Skin Balancing Toner",
+            "price": "$18.00",
+            "rating": 4.5,
+            "link": "https://example.com/paulas-choice-toner"
+          }
+        ]
+      },
+      {
+        "step": "Serum",
+        "products": [
+          {
+            "name": "The Ordinary Niacinamide 10% + Zinc 1%",
+            "price": "$6.50",
+            "rating": 4.8,
+            "link": "https://example.com/ordinary-niacinamide"
+          },
+          {
+            "name": "Glow Recipe Watermelon Glow Niacinamide Dew Drops",
+            "price": "$24.99",
+            "rating": 4.7,
+            "link": "https://example.com/glow-recipe-serum"
+          }
+        ]
+      },
+      {
+        "step": "Moisturizer",
+        "products": [
+          {
+            "name": "Neutrogena Hydro Boost Gel Cream",
+            "price": "$18.99",
+            "rating": 4.7,
+            "link": "https://example.com/neutrogena-moisturizer"
+          },
+          {
+            "name": "CeraVe Moisturizing Cream",
+            "price": "$16.99",
+            "rating": 4.9,
+            "link": "https://example.com/cerave-moisturizer"
+          }
+        ]
+      },
+      {
+        "step": "Sunscreen",
+        "products": [
+          {
+            "name": "EltaMD UV Clear SPF 46",
+            "price": "$36.00",
+            "rating": 4.8,
+            "link": "https://example.com/eltamd-sunscreen"
+          },
+          {
+            "name": "Supergoop! Unseen Sunscreen SPF 40",
+            "price": "$34.00",
+            "rating": 4.7,
+            "link": "https://example.com/supergoop-sunscreen"
+          }
+        ]
+      }
+    ]
+  }
+  
