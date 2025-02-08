@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
+import RoutineGenerator from "../components/RoutineGenerator";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,6 +36,11 @@ export default function Home() {
           </li>
           <li>Save and see your changes instantly.</li>
         </ol>
+
+        {/* 🚀 Integrated Routine Generator Component Here */}
+        <div className="w-full max-w-lg">
+          <RoutineGenerator />
+        </div>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
           <a

@@ -3,11 +3,18 @@ Our platform provides personalized skincare recommendations based on AI-powered 
 
 ### Features
 
- - AI-Powered Skin Analysis: Upload three images of your face, and our AI will analyze your skin type, texture, and potential concerns.
+## Running frontend
 
- - Personalized Recommendations: Receive customized skincare product suggestions based on your unique skin profile.
+```
+cd frontend
+npm run dev
+```
 
- - Ingredient-Based Product Matching: Avoid allergens and harsh ingredients.
+## Running backend
+```
+cd backend
+
+```
 
  - Routine Optimization: Get expert-backed guidance on how to structure your daily skincare routine for maximum effectiveness.
 
