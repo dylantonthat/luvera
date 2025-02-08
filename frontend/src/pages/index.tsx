@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-brand-light">
       <section className="relative flex items-center justify-center h-[90vh] bg-cover bg-center"
-        style={{ backgroundImage: "url('/placeholder-hero.jpg')" }}
+        style={{ backgroundImage: "url('/luvera-pic1.jpg')" }}
       >
         <div className="absolute inset-0 bg-black/30" />
         <div className="relative z-10 text-white text-center">
@@ -34,7 +34,7 @@ export default function Home() {
             href="#"
             cta="Start Now"
             className="col-span-1"
-            background={<Image src="/placeholder-1.jpg" alt="Step 1" width={256} height={256} className="rounded-lg" />}
+            background={<Image src="/luvera-pic2.png" alt="Step 1" width={256} height={256} className="rounded-lg" />}
           />
           <BentoCard
             name="Step 2"
@@ -42,7 +42,7 @@ export default function Home() {
             href="#"
             cta="Analyze"
             className="col-span-1"
-            background={<Image src="/placeholder-2.jpg" alt="Step 2" width={256} height={256} className="rounded-lg" />}
+            background={<Image src="/luvera-pic3.png" alt="Step 2" width={256} height={256} className="rounded-lg" />}
           />
           <BentoCard
             name="Step 3"
@@ -50,7 +50,7 @@ export default function Home() {
             href="/routines"
             cta="Get Routine"
             className="col-span-1"
-            background={<Image src="/placeholder-3.jpg" alt="Step 3" width={256} height={256} className="rounded-lg" />}
+            background={<Image src="/luvera-pic4.png" alt="Step 3" width={256} height={256} className="rounded-lg" />}
           />
         </BentoGrid>
       </section>
