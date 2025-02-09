@@ -11,7 +11,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Luvera: Accessible Skincare, One Ingredient at a Time</title>
+        <title>Luvera: Reimagining Skincare, One Ingredient at a Time</title>
         <meta name="description" content="Welcome to Luvera." />
       </Head>
 
