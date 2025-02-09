@@ -49,15 +49,15 @@ const Hero = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1.8, ease: [0.25, 1, 0.5, 1], delay: 0.7 }}
       >
-        <h1 className="text-5xl font-display leading-tight">
+        <h1 className="text-5xl font-display font-semibold leading-tight">
           Take control of <br /> your skincare journey
         </h1>
-        <p className="mt-4 text-sm uppercase tracking-wider opacity-90">
-          upload images • ai analysis • skincare recommendations
+        <p className="mt-4 text-md uppercase tracking-wider opacity-90">
+          upload image & receive ai analysis + skincare recommendations!
         </p>
 
         {/* Get Started Button */}
-        <Link href="/routines" passHref>
+        <Link href="/assessment" passHref>
           <motion.button
             className="mt-6 border border-white px-6 py-2 rounded-full text-lg tracking-wide hover:bg-white hover:text-brand-dark transition"
             whileHover={{ scale: 1.05 }}
