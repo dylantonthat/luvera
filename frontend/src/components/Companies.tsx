@@ -29,19 +29,19 @@ const marqueeAnimation = keyframes`
 
 // Styled Components
 const Section = styled.section`
-  max-width: 1280px;
+  max-width: 1400px;
   margin: auto;
-  padding: 3rem 1.5rem;
+  padding: 4rem 2rem;
   text-align: center;
   overflow: hidden;
   position: relative;
 `;
 
 const Title = styled.h2`
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
   color: #8B817A;
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
 `;
 
 const LogosContainer = styled.div`
@@ -49,24 +49,24 @@ const LogosContainer = styled.div`
   overflow: hidden;
   position: relative;
   width: 100%;
-  padding: 5rem 0;
+  padding: 6rem 0;
 `;
 
 const LogosTrack = styled.div`
   display: flex;
   flex-shrink: 0;
   align-items: center;
-  animation: ${marqueeAnimation} 15s linear infinite; /* Smooth infinite scroll */
-  min-width: 200%; /* Ensures seamless loop */
+  animation: ${marqueeAnimation} 20s linear infinite; /* Smooth infinite scroll */
+  min-width: 200%;
 `;
 
 const Logo = styled.img`
-  margin: 0 40px;
-  max-height: 60px; /* Ensures logos don't stretch */
-  width: auto; /* Maintains aspect ratio */
-  object-fit: contain; /* Ensures images fit nicely */
-  flex: 0 0 auto; /* Prevents stretching */
-  filter: grayscale(30%);
+  margin: 0 50px;
+  max-height: 80px; /* Bigger logos */
+  width: auto;
+  object-fit: contain;
+  flex: 0 0 auto;
+  filter: grayscale(20%);
 `;
 
 const Companies: React.FC = () => {
@@ -74,7 +74,6 @@ const Companies: React.FC = () => {
     <Section id="logos">
       <h2 className="text-4xl font-display text-[#8B817A]">INDUSTRY LEADING RECOMMENDATIONS</h2>
       <LogosContainer>
-        {/* Create two identical sets of logos to make the loop seamless */}
         <LogosTrack>
           {logos.map((logo, index) => (
             <Logo key={index} src={logo.src} alt={logo.name} loading="lazy" />

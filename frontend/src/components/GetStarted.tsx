@@ -1,30 +1,62 @@
+import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { useRef } from "react";
 
 const GetStarted = () => {
-  return (
-    <section className="relative w-full">
-      {/* ✅ Bottom Image (Full Width & Adaptive) */}
-      <Image
-        src="/landing-bottom.png"
-        alt="Skincare Products Background"
-        layout="responsive"
-        width={1440}
-        height={800}
-        className="w-full h-auto object-cover"
-      />
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false, margin: "-100px" });
 
-      {/* ✅ CTA Overlay on Image (Left-Aligned Text & Button) */}
-      <div className="absolute inset-0 flex flex-col justify-center text-white text-left px-12 md:px-24 max-w-2xl">
-        <h2 className="text-4xl font-display leading-tight">
-          TRANSFORM YOUR SKIN <br /> TODAY
-        </h2>
-        <Link href="/routines">
-          <button className="mt-6 bg-[#FFDCC1] text-brand-dark px-6 py-3 rounded-full text-lg font-medium font-sans transition hover:bg-[#EFC7AD] hover:text-brand-dark shadow-lg">
-            get started →
-          </button>
-        </Link>
-      </div>
+  return (
+    <section ref={ref} className="relative w-full overflow-hidden">
+      <motion.div
+        initial={false}
+        animate={isInView ? { scale: 1 } : { scale: 1.1 }}
+        transition={{ duration: 2, ease: "easeOut" }}
+        className="w-full h-auto"
+      >
+        <Image
+          src="/landing-bottom.png"
+          alt="Skincare Products Background"
+          layout="responsive"
+          width={1440}
+          height={800}
+          className="w-full h-auto object-cover"
+        />
+      </motion.div>
+
+      <motion.div
+        initial={false}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+        className="absolute inset-0 flex flex-col justify-center text-white text-left px-12 md:px-24 max-w-2xl -mt-8"
+      >
+        <motion.h2
+          initial={false}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -40 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="text-3xl md:text-5xl font-display leading-snug md:leading-tight max-w-xl"
+        >
+          TRANSFORM YOUR <br /> SKIN TODAY
+        </motion.h2>
+
+        <motion.div
+          initial={false}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+        >
+          <Link href="/routines">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 200 }}
+              className="mt-6 bg-[#FFDCC1] text-brand-dark px-6 py-3 rounded-full text-lg font-medium transition hover:bg-[#EFC7AD] hover:text-brand-dark shadow-lg"
+            >
+              get started →
+            </motion.button>
+          </Link>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

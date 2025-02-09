@@ -5,4 +5,10 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
 };
 
+module.exports = {
+  compiler: {
+    styledComponents: true, // Enables SSR support for styled-components
+  },
+};
+
 export default nextConfig;
