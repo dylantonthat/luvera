@@ -5,19 +5,19 @@ const HowItWorks = () => {
     {
       title: 'Upload an Image',
       category: 'Step 1',
-      description: 'Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.',
+      description: 'Your skin, unfiltered. No noise: just the truth.',
       image: '/luvera-pic2.png',
     },
     {
       title: 'AI Analyzes Your Skin',
       category: 'Step 2',
-      description: 'Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.',
+      description: 'Beneath the surface. Data meets intuition.',
       image: '/luvera-pic3.png',
     },
     {
       title: 'Get Your Routine',
       category: 'Step 3',
-      description: 'Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.',
+      description: 'Essential. Intentional. No excess: just what works.',
       image: '/luvera-pic4.png',
     }
   ];

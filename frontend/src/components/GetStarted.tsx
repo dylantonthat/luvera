@@ -21,7 +21,7 @@ const GetStarted = () => {
         </h2>
         <Link href="/routines">
           <button className="mt-6 bg-[#FFDCC1] text-brand-dark px-6 py-3 rounded-full text-lg font-medium font-sans transition hover:bg-[#EFC7AD] hover:text-brand-dark shadow-lg">
-            Get Started
+            get started →
           </button>
         </Link>
       </div>
