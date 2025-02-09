@@ -37,13 +37,6 @@ const Section = styled.section`
   position: relative;
 `;
 
-const Title = styled.h2`
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #8B817A;
-  padding-bottom: 1.5rem;
-`;
-
 const LogosContainer = styled.div`
   display: flex;
   overflow: hidden;
