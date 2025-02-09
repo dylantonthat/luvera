@@ -22,7 +22,7 @@ Contains all json for products we compiled
 
  - Routine Optimization: Get expert-backed guidance on how to structure your daily skincare routine for maximum effectiveness.
 
- - Privacy-Focused: Your uploaded images and data are securely processed and never shared without your consent.
+ - Privacy-Focused: Your uploaded images and data are securely processed and never shared.
 
 ### How It Works
 
