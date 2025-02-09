@@ -2,21 +2,24 @@ import { title } from "@/components/primitives";
 import { useState } from "react";
 import { Button } from "@heroui/button";
 import { Input } from "@heroui/input";
-import { Card, CardHeader, CardBody, CardFooter } from "@heroui/card";
+import { Card, CardBody } from "@heroui/card";
 import { Loader2, Upload } from "lucide-react";
+import ReactConfetti from "react-confetti";
 
 async function analyzeSkin(imageFile: File) {
-    const formData = new FormData();
-    formData.append("image", imageFile);
+  const formData = new FormData();
+  formData.append("file", imageFile);
 
-    const response = await fetch("/api/analyzeSkin", {
-        method: "POST",
-        body: formData,
-    });
+  const response = await fetch("/api/analyzeSkin", {
+    method: "POST",
+    body: formData,
+  });
 
-    const data = await response.json();
-    console.log("Skin Analysis Result:", data);
-    return data;
+  if (!response.ok) {
+    console.error("Failed to analyze skin");
+  }
+
+  return response.json();
 }
 
 export default function Assessment() {
@@ -26,6 +29,10 @@ export default function Assessment() {
     const [error, setError] = useState<string | null>(null);
     const [loading, setLoading] = useState(false);
     const [results, setResults] = useState<any | null>(null);
+    const [imagePreview, setImagePreview] = useState<string | null>(null);
+    const [showLooksMaxxingModal, setShowLooksMaxxingModal] = useState(false);
+    const [optedIntoLooksMaxxing, setOptedIntoLooksMaxxing] = useState(false);
+    const [looksMaxxingScore, setLooksMaxxingScore] = useState('');
       
     const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
       const uploadedFile = event.target.files?.[0];
@@ -46,7 +53,7 @@ export default function Assessment() {
       setError(null);
     };
   
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
       if (!firstName) {
         setError("Please enter your first name.");
         return;
@@ -55,51 +62,73 @@ export default function Assessment() {
         setError("Please upload a frontal face image.");
         return;
       }
-      
+    
       setLoading(true);
+      setImagePreview(URL.createObjectURL(file));
       setError(null);
-  
-      analyzeSkin(file).then((data) => {
-        console.log(data)
-      });
-  
-      setTimeout(() => {
+    
+      try {
+        detectedIssues = ["Acne"];
+        try {
+          const data = await analyzeSkin(file);
+          var detectedIssues = data.data;
+        } catch (err) {
+          console.error(err);
+        }
+    
+        const response = await fetch("/products.json");
+        const productData = await response.json();
+
+        const matchedProducts = detectedIssues.map((issue: string) => {
+          const skinIssue = productData[0].skin_issues.find((si: any) => si.name === issue);
+
+          if (!skinIssue || !skinIssue.products.length) return { name: issue, recommendations: [] };
+          const shuffled = [...skinIssue.products].sort(() => 0.5 - Math.random());
+          const selectedProducts = shuffled.slice(0, 2);
+
+          return { name: issue, recommendations: selectedProducts };
+        });
+    
         setResults({
           message: `Hi ${firstName}, based on our analysis, here are your skincare insights!`,
-          issues: [
-            {
-              name: "Dry Skin",
-              recommendations: [
-                {
-                  name: "CeraVe Moisturizing Cream",
-                  price: "$14.99",
-                  link: "https://www.example.com/cerave",
-                  ingredients: ["Hyaluronic Acid", "Ceramides"],
-                  studies: [
-                    {
-                      title: "Hyaluronic Acid and Skin Hydration",
-                      link: "https://www.ncbi.nlm.nih.gov/pubmed/12345678",
-                    },
-                  ],
-                },
-                {
-                  name: "La Roche-Posay Toleriane Hydrating Cleanser",
-                  price: "$16.99",
-                  link: "https://www.example.com/lrp",
-                  ingredients: ["Niacinamide", "Glycerin"],
-                  studies: [
-                    {
-                      title: "Niacinamide's Role in Skin Barrier Repair",
-                      link: "https://www.ncbi.nlm.nih.gov/pubmed/23456789",
-                    },
-                  ],
-                },
-              ],
-            },
-          ],
+          issues: matchedProducts,
         });
-        setLoading(false);
-      }, Math.floor(Math.random() * (7000 - 3000 + 1)) + 3000);
+        setShowLooksMaxxingModal(true);
+      } catch (err) {
+        console.error(err);
+        detectedIssues = ["Acne"];
+        const response = await fetch("/products.json");
+        const productData = await response.json();
+
+        const matchedProducts = detectedIssues.map((issue: string) => {
+          const skinIssue = productData[0].skin_issues.find((si: any) => si.name === issue);
+
+          if (!skinIssue || !skinIssue.products.length) return { name: issue, recommendations: [] };
+          const shuffled = [...skinIssue.products].sort(() => 0.5 - Math.random());
+          const selectedProducts = shuffled.slice(0, 2);
+
+          return { name: issue, recommendations: selectedProducts };
+        });
+        setResults({
+          message: `Hi ${firstName}, based on our analysis, here are your skincare insights!`,
+          issues: matchedProducts,
+        });
+        setShowLooksMaxxingModal(true);
+      }
+    
+      setLoading(false);
+    };
+    
+    const handleLooksMaxxingOptIn = () => {
+      setOptedIntoLooksMaxxing(true);
+      const score = (Math.random() * (9.8 - 6.8) + 6.8).toFixed(1);
+      setLooksMaxxingScore(score);
+      setShowLooksMaxxingModal(false);
+    }; 
+  
+    const handleLooksMaxxingOptOut = () => {
+      setOptedIntoLooksMaxxing(false);
+      setShowLooksMaxxingModal(false);
     };
 
     return (
@@ -108,7 +137,6 @@ export default function Assessment() {
             <h1 className={title()}>Skin Assessment</h1>
       
             <div className="mt-6 space-y-6">
-              {/* Name Input */}
               <Input
                 type="text"
                 placeholder="Enter your first name"
@@ -117,7 +145,6 @@ export default function Assessment() {
                 className="text-lg"
               />
       
-              {/* File Upload Section */}
               <div className="border border-dashed border-gray-400 p-6 rounded-lg text-center hover:bg-gray-50 dark:hover:bg-gray-800 transition cursor-pointer">
                 <label>
                   <Upload className="mx-auto h-8 w-8 text-gray-600" />
@@ -125,12 +152,16 @@ export default function Assessment() {
                   <input type="file" className="hidden" accept=".jpg,.jpeg,.png" onChange={handleFileUpload} />
                 </label>
               </div>
+
+              {imagePreview && (
+                <div className="flex justify-center mt-4">
+                  <img src={imagePreview} alt="Uploaded Preview" className="w-24 h-24 rounded-md shadow-md object-cover" />
+                </div>
+              )}
       
-              {/* Feedback Messages */}
               {file && <p className="text-sm text-green-600 text-center">✅ Image uploaded successfully!</p>}
               {error && <p className="text-sm text-red-600 text-center">{error}</p>}
       
-              {/* Analyze Button (Centered) */}
               <div className="flex justify-center">
                 <Button className="font-semibold w-full max-w-xs py-3" onPress={handleSubmit} disabled={loading}>
                   {loading ? <Loader2 className="h-5 w-5 animate-spin" /> : "Analyze"}
@@ -138,14 +169,13 @@ export default function Assessment() {
               </div>
             </div>
       
-            {/* Loading State */}
             {loading && <p className="mt-4 text-center text-gray-500">🔍 Analyzing your skin...</p>}
-      
-            {/* Results Section */}
+
             {results && (
               <Card className="mt-6 shadow-lg rounded-2xl p-4 bg-white dark:bg-gray-800">
                 <CardBody>
                   <h2 className="text-xl font-semibold text-center">{results.message}</h2>
+                  
                   {results.issues.map((issue: any, index: number) => (
                     <div key={index} className="mt-4">
                       <h3 className="text-lg font-bold text-blue-500">{issue.name}</h3>
@@ -161,10 +191,69 @@ export default function Assessment() {
                       ))}
                     </div>
                   ))}
+                  
+                  <div className="mt-8">
+                    <h3 className="text-lg font-bold text-blue-500">Recommended Routine</h3>
+                    <ul className="list-disc pl-5">
+                      {results.issues.map((issue: any, index: number) => {
+                        let routineSteps = [];
+
+                        if (issue.name.toLowerCase().includes("acne")) {
+                          routineSteps.push("Apply acne treatment in the morning after cleansing.");
+                          routineSteps.push("Use a gentle moisturizer after acne treatment to prevent dryness.");
+                        }
+
+                        if (issue.name.toLowerCase().includes("dry skin")) {
+                          routineSteps.push("Use a hydrating cleanser in the morning and night.");
+                          routineSteps.push("Apply a rich moisturizer after cleansing, especially before bed.");
+                        }
+
+                        if (issue.name.toLowerCase().includes("hyperpigmentation")) {
+                          routineSteps.push("Apply Vitamin C serum in the morning to reduce dark spots.");
+                          routineSteps.push("Use sunscreen daily to prevent further pigmentation.");
+                        }
+
+                        return (
+                          <div key={index} className="mt-4">
+                            <h4 className="text-md font-semibold text-gray-800">{issue.name} Routine</h4>
+                            <ul className="pl-4">
+                              {routineSteps.map((step, stepIdx) => (
+                                <li key={stepIdx} className="text-sm">{step}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        );
+                      })}
+                    </ul>
+                  </div>
                 </CardBody>
               </Card>
             )}
+
+            {showLooksMaxxingModal && (
+              <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+                <div className="bg-white rounded-lg p-6 w-80 text-center">
+                  <h3 className="text-lg font-bold text-blue-500 mb-4">Opt into Experimental 'LooksMaxxing' Mode?</h3>
+                  <p className="mb-4 text-sm">Would you like to let our AI compliment you and rate your ability to mew? This feature is completely experimental!</p>
+                  <Button onPress={handleLooksMaxxingOptIn} className="mr-4">Yes, I'm ready!</Button>
+                  <Button onPress={handleLooksMaxxingOptOut}>No thanks</Button>
+                </div>
+              </div>
+            )}
+
+            {optedIntoLooksMaxxing && (
+              <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+                <div className="bg-white rounded-lg p-6 w-80 text-center">
+                  <h2 className="text-xl font-semibold">AI Says:</h2>
+                  <p className="mt-2">✨ You are looking absolutely stunning today! Your mewing technique is on point, and you're radiating big boss energy!</p>
+                  <h3 className="text-3xl font-bold mt-4">LooksMaxxing Score: {looksMaxxingScore}</h3>
+                  <ReactConfetti width={window.innerWidth} height={window.innerHeight} />
+                  <Button onClick={() => setOptedIntoLooksMaxxing(false)} className="mt-4">Close</Button>
+                </div>
+              </div>
+            )}
+
           </div>
         </div>
       );            
-    }
+}

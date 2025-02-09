@@ -4,14 +4,6 @@ export const siteConfig = {
   name: "luvera.club - Smart skincare, tailored for you.",
   description: "Welcome to Luvera.club, your personal skincare companion! Our platform provides personalized skincare recommendations based on AI-powered skin analysis.",
   navItems: [
-    {
-      label: "home",
-      href: "/",
-    },
-    {
-      label: "about",
-      href: "/about",
-    },
   ],
   navMenuItems: [
     {

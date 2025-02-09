@@ -45,7 +45,7 @@ const Navbar = () => {
   );
 
   return (
-    <HeroUINavbar maxWidth="xl" position='sticky' className="absolute bg-transparent backdrop-blur-lg top-0 left-0 w-full z-50">
+    <HeroUINavbar maxWidth="xl" position='sticky' className="absolute top-0 left-0 w-full z-50 no-blur">
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
@@ -53,7 +53,7 @@ const Navbar = () => {
           </NextLink>
         </NavbarBrand>
         <ul className="hidden lg:flex gap-4 justify-start ml-2">
-          {siteConfig.navItems.map((item) => (
+          {siteConfig.navItems.map((item: any) => (
             <NavbarItem key={item.href}>
               <NextLink
                 className={clsx(
