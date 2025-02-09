@@ -45,7 +45,7 @@ const GetStarted = () => {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
         >
-          <Link href="/routines">
+          <Link href="/assessment">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

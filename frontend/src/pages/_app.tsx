@@ -1,3 +1,4 @@
+import Navbar from "@/components/navbar";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { Lexend, Libre_Bodoni, Libre_Caslon_Display } from "next/font/google";
@@ -16,6 +17,7 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
 
       <div className={`${libreCaslon.variable} ${lexend.variable} ${libreBodoni.variable}`}>
+        <Navbar />
         <Component {...pageProps} />
       </div>
     </>

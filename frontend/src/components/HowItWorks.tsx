@@ -49,13 +49,13 @@ const HowItWorks = () => {
                   height={500}
                 />
                 <div className="p-6">
-                  <h2 className="tracking-widest text-xs title-font font-display font-medium text-gray-400 mb-1">
+                  <h2 className="tracking-widest text-xs title-font font-display font-semibold text-gray-400 mb-1">
                     {blog.category}
                   </h2>
-                  <h1 className="title-font text-lg font-display font-medium text-gray-900 mb-3">
+                  <h1 className="title-font text-lg font-display font-semibold text-gray-900 mb-3">
                     {blog.title}
                   </h1>
-                  <p className="leading-relaxed font-display text-[#8B817A] mb-3">
+                  <p className="leading-relaxed font-display font-semibold text-[#8B817A] mb-3">
                     {blog.description}
                   </p>
                 </div>
