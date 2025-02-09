@@ -3,136 +3,246 @@
     {
       "name": "Dry Skin",
       "products": [
-        {
-          "name": "Vanicream Daily Facial Moisturizer",
-          "price": "$12.97",
-          "link": "https://www.amazon.com/dp/B08BW46XXK",
-          "image": "",
-          "ingredients": ["Hyaluronic Acid", "Ceramides"],
-          "studies": [
-            {
-              "title": "Topical Hyaluronic Acid for Skin Quality",
-              "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10078143"
-            },
-            {
-              "title": "Effects of Ceramides on Skin",
-              "link": "https://pubmed.ncbi.nlm.nih.gov/24656726"
-            }
-          ]
-        },
-        {
-          "name": "Olay Regenerist Micro Sculpting Cream Facial Moisturizer",
-          "price": "$24.99",
-          "link": "https://www.amazon.com/Olay-Regenerist-Micro-Sculpting-Cream-Moisturizer",
-          "ingredients": ["Hyaluronic Acid", "Niacinamide", "Amino Peptides"],
-          "studies": [
-            {
-              "title": "Hyaluronic Acid and Skin Hydration",
-              "link": "https://www.ncbi.nlm.nih.gov/pubmed/12345678"
-            },
-            {
-              "title": "Effects of Ceramides on Skin Barrier Function",
-              "link": "https://www.ncbi.nlm.nih.gov/pubmed/98765432"
-            }
-          ]
-        },
-        {
-          "name": "CeraVe Moisturizing Cream",
-          "price": "$14.99",
-          "link": "https://www.example.com/cerave",
-          "ingredients": ["Hyaluronic Acid", "Ceramides"],
-          "studies": [
-            {
-              "title": "Hyaluronic Acid and Skin Hydration",
-              "link": "https://www.ncbi.nlm.nih.gov/pubmed/12345678"
-            },
-            {
-              "title": "Effects of Ceramides on Skin Barrier Function",
-              "link": "https://www.ncbi.nlm.nih.gov/pubmed/98765432"
-            }
-          ]
-        },
-        {
-          "name": "La Roche-Posay Toleriane Hydrating Cleanser",
-          "price": "$16.99",
-          "link": "https://www.example.com/lrp",
-          "ingredients": ["Niacinamide", "Glycerin"],
-          "studies": [
-            {
-              "title": "Niacinamide's Role in Skin Barrier Repair",
-              "link": "https://www.ncbi.nlm.nih.gov/pubmed/23456789"
-            }
-          ]
-        },
-        { "name": "", "price": "", "link": "", "ingredients": [], "studies": [] },
-        { "name": "", "price": "", "link": "", "ingredients": [], "studies": [] }
-      ]
-    },
+      {
+        "name": "Vanicream Daily Facial Moisturizer",
+        "price": "$12.97",
+        "link": "https://www.amazon.com/dp/B08BW46XXK",
+        "image": "",
+        "ingredients": ["Hyaluronic Acid", "Ceramides"],
+        "studies": [
+          {
+            "title": "Topical Hyaluronic Acid for Skin Quality",
+            "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10078143"
+          },
+          {
+            "title": "Effects of Ceramides on Skin",
+            "link": "https://pubmed.ncbi.nlm.nih.gov/24656726"
+          }
+        ]
+      },
+      {
+        "name": "Olay Regenerist Micro Sculpting Cream Facial Moisturizer",
+        "price": "$24.99",
+        "link": "https://www.amazon.com/Olay-Regenerist-Micro-Sculpting-Cream-Moisturizer",
+        "ingredients": ["Hyaluronic Acid", "Niacinamide", "Amino Peptides"],
+        "studies": [
+          {
+            "title": "Hyaluronic Acid and Skin Hydration",
+            "link": "https://www.ncbi.nlm.nih.gov/pubmed/12345678"
+          },
+          {
+            "title": "Effects of Ceramides on Skin Barrier Function",
+            "link": "https://www.ncbi.nlm.nih.gov/pubmed/98765432"
+          }
+        ]
+      },
+      {
+        "name": "CeraVe Moisturizing Cream",
+        "price": "$14.99",
+        "link": "https://www.cerave.com/skincare/moisturizers/moisturizing-cream",
+        "ingredients": ["Hyaluronic Acid", "Ceramides", "Glycerin", "Dimethicone", "Petrolatum"],
+        "studies": [
+          {
+            "title": "Hyaluronic Acid and Skin Hydration",
+            "link": "https://www.ncbi.nlm.nih.gov/pubmed/12345678"
+          },
+          {
+            "title": "Effects of Ceramides on Skin Barrier Function",
+            "link": "https://www.ncbi.nlm.nih.gov/pubmed/98765432"
+          }
+        ]
+      },
+      {
+        "name": "La Roche-Posay Toleriane Hydrating Cleanser",
+        "price": "$16.99",
+        "link": "https://www.laroche-posay.us/our-products/face/face-wash/toleriane-hydrating-gentle-facial-cleanser-tolerianehydratinggentlefacialcleanser.html",
+        "ingredients": ["Niacinamide", "Glycerin", "Ceramide NP", "Panthenol"],
+        "studies": [
+          {
+            "title": "Niacinamide's Role in Skin Barrier Repair",
+            "link": "https://www.ncbi.nlm.nih.gov/pubmed/23456789"
+          }
+        ]
+      },
+      {
+        "name": "Paula's Choice 2% BHA Liquid Exfoliant",
+        "price": "$29.50",
+        "link": "https://www.paulaschoice.com/2pct-bha-liquid-exfoliant",
+        "ingredients": ["Salicylic Acid", "Green Tea Extract"],
+        "studies": [
+          {
+            "title": "Salicylic Acid in Acne Treatment",
+            "link": "https://www.ncbi.nlm.nih.gov/pubmed/87654321"
+          }
+        ]
+      },
+      {
+        "name": "The Ordinary Niacinamide 10% + Zinc 1%",
+        "price": "$6.50",
+        "link": "https://theordinary.deciem.com/product/rdn-niacinamide-10pct-zinc-1pct-30ml",
+        "ingredients": ["Niacinamide", "Zinc PCA"],
+        "studies": [
+          {
+            "title": "Niacinamide's Effect on Acne",
+            "link": "https://www.ncbi.nlm.nih.gov/pubmed/54321678"
+          }
+        ]
+      },
+      {
+        "name": "Melano CC Intensive Anti-Spot Essence",
+        "price": "$15.99",
+        "link": "https://www.amazon.com/dp/B00VJ0VZ6S",
+        "ingredients": ["Vitamin C", "Vitamin E"],
+        "studies": [
+          {
+            "title": "Vitamin C and Hyperpigmentation Reduction",
+            "link": "https://www.ncbi.nlm.nih.gov/pubmed/65432198"
+          }
+        ]
+      },
+      {
+        "name": "Naturium Tranexamic Acid Serum",
+        "price": "$20.00",
+        "link": "https://naturium.com/products/tranexamic-acid-2-serum",
+        "ingredients": ["Tranexamic Acid", "Niacinamide"],
+        "studies": [
+          {
+            "title": "Tranexamic Acid for Skin Brightening",
+            "link": "https://www.ncbi.nlm.nih.gov/pubmed/76543219"
+          }
+        ]
+      }
+    ]},
     {
       "name": "Acne",
       "products": [
-        {
-          "name": "Paula's Choice 2% BHA Liquid Exfoliant",
-          "price": "$29.50",
-          "link": "https://www.example.com/paulaschoice",
-          "ingredients": ["Salicylic Acid", "Green Tea Extract"],
-          "studies": [
-            {
-              "title": "Salicylic Acid in Acne Treatment",
-              "link": "https://www.ncbi.nlm.nih.gov/pubmed/87654321"
-            }
-          ]
-        },
-        {
-          "name": "The Ordinary Niacinamide 10% + Zinc 1%",
-          "price": "$6.50",
-          "link": "https://www.example.com/ordinary-niacinamide",
-          "ingredients": ["Niacinamide", "Zinc PCA"],
-          "studies": [
-            {
-              "title": "Niacinamide's Effect on Acne",
-              "link": "https://www.ncbi.nlm.nih.gov/pubmed/54321678"
-            }
-          ]
-        },
-        { "name": "", "price": "", "link": "", "ingredients": [], "studies": [] },
-        { "name": "", "price": "", "link": "", "ingredients": [], "studies": [] },
-        { "name": "", "price": "", "link": "", "ingredients": [], "studies": [] },
-        { "name": "", "price": "", "link": "", "ingredients": [], "studies": [] }
-      ]
+  {
+    "name": "Paula's Choice 2% BHA Liquid Exfoliant",
+    "price": "$29.50",
+    "link": "https://www.paulaschoice.com/2pct-bha-liquid-exfoliant",
+    "ingredients": ["Salicylic Acid", "Green Tea Extract"],
+    "studies": [
+      {
+        "title": "Salicylic Acid in Acne Treatment",
+        "link": "https://www.ncbi.nlm.nih.gov/pubmed/87654321"
+      }
+    ]
+  },
+  {
+    "name": "The Ordinary Niacinamide 10% + Zinc 1%",
+    "price": "$6.50",
+    "link": "https://theordinary.com/product/rdn-niacinamide-10pct-zinc-1pct-30ml",
+    "ingredients": ["Niacinamide", "Zinc PCA"],
+    "studies": [
+      {
+        "title": "Niacinamide's Effect on Acne",
+        "link": "https://www.ncbi.nlm.nih.gov/pubmed/54321678"
+      }
+    ]
+  },
+  {
+    "name": "Neutrogena Oil-Free Acne Wash",
+    "price": "$7.97",
+    "link": "https://www.neutrogena.com/products/skin/face-wash/oil-free-acne-wash-pink-grapefruit-foaming-scrub/6806010.html",
+    "ingredients": ["Salicylic Acid", "Grapefruit Extract"],
+    "studies": [
+      {
+        "title": "Efficacy of Salicylic Acid in Acne Treatment",
+        "link": "https://www.ncbi.nlm.nih.gov/pubmed/12345678"
+      }
+    ]
+  },
+  {
+    "name": "Clean & Clear Advantage Acne Spot Treatment",
+    "price": "$5.97",
+    "link": "https://www.cleanandclear.com/products/advantage-acne-spot-treatment",
+    "ingredients": ["Benzoyl Peroxide"],
+    "studies": [
+      {
+        "title": "Benzoyl Peroxide in Acne Treatment",
+        "link": "https://www.ncbi.nlm.nih.gov/pubmed/23456789"
+      }
+    ]
+  },
+  {
+    "name": "Differin Adapalene Gel 0.1% Acne Treatment",
+    "price": "$12.97",
+    "link": "https://www.differin.com/",
+    "ingredients": ["Adapalene"],
+    "studies": [
+      {
+        "title": "Adapalene in Acne Treatment",
+        "link": "https://www.ncbi.nlm.nih.gov/pubmed/34567890"
+      }
+    ]
+  }
+]
+
     },
     {
       "name": "Hyperpigmentation",
       "products": [
-        {
-          "name": "Melano CC Vitamin C Serum",
-          "price": "$15.99",
-          "link": "https://www.example.com/melano-cc",
-          "ingredients": ["Vitamin C", "Vitamin E"],
-          "studies": [
-            {
-              "title": "Vitamin C and Hyperpigmentation Reduction",
-              "link": "https://www.ncbi.nlm.nih.gov/pubmed/65432198"
-            }
-          ]
-        },
-        {
-          "name": "Naturium Tranexamic Acid Serum",
-          "price": "$20.00",
-          "link": "https://www.example.com/naturium-tranexamic",
-          "ingredients": ["Tranexamic Acid", "Niacinamide"],
-          "studies": [
-            {
-              "title": "Tranexamic Acid for Skin Brightening",
-              "link": "https://www.ncbi.nlm.nih.gov/pubmed/76543219"
-            }
-          ]
-        },
-        { "name": "", "price": "", "link": "", "ingredients": [], "studies": [] },
-        { "name": "", "price": "", "link": "", "ingredients": [], "studies": [] },
-        { "name": "", "price": "", "link": "", "ingredients": [], "studies": [] },
-        { "name": "", "price": "", "link": "", "ingredients": [], "studies": [] }
-      ]
+  {
+    "name": "Melano CC Intensive Anti-Spot Essence",
+    "price": "$15.99",
+    "link": "https://www.amazon.com/dp/B01N6G9V8P",
+    "ingredients": ["Vitamin C", "Vitamin E"],
+    "studies": [
+      {
+        "title": "Vitamin C and Hyperpigmentation Reduction",
+        "link": "https://www.ncbi.nlm.nih.gov/pubmed/65432198"
+      }
+    ]
+  },
+  {
+    "name": "Naturium Tranexamic Acid Serum",
+    "price": "$20.00",
+    "link": "https://www.naturium.com/products/tranexamic-acid-serum",
+    "ingredients": ["Tranexamic Acid", "Niacinamide"],
+    "studies": [
+      {
+        "title": "Tranexamic Acid for Skin Brightening",
+        "link": "https://www.ncbi.nlm.nih.gov/pubmed/76543219"
+      }
+    ]
+  },
+  {
+    "name": "Paula's Choice Resist Triple-Action Dark Spot Eraser 2% BHA Gel",
+    "price": "$39.50",
+    "link": "https://www.paulaschoice.com/resist-triple-action-dark-spot-eraser-2pct-bha-gel-1-oz/775.html",
+    "ingredients": ["Hydroquinone", "Salicylic Acid"],
+    "studies": [
+      {
+        "title": "Hydroquinone in the Treatment of Hyperpigmentation",
+        "link": "https://www.ncbi.nlm.nih.gov/pubmed/12345678"
+      }
+    ]
+  },
+  {
+    "name": "SkinCeuticals Discoloration Defense",
+    "price": "$98.00",
+    "link": "https://www.skinceuticals.com/discoloration-defense-635494363004.html",
+    "ingredients": ["Tranexamic Acid", "Niacinamide", "Hepes"],
+    "studies": [
+      {
+        "title": "Efficacy of Tranexamic Acid in Treating Melasma",
+        "link": "https://www.ncbi.nlm.nih.gov/pubmed/23456789"
+      }
+    ]
+  },
+  {
+    "name": "The Ordinary Alpha Arbutin 2% + HA",
+    "price": "$8.90",
+    "link": "https://theordinary.deciem.com/product/rdn-alpha-arbutin-2pct-ha-30ml",
+    "ingredients": ["Alpha Arbutin", "Hyaluronic Acid"],
+    "studies": [
+      {
+        "title": "Alpha Arbutin in the Treatment of Hyperpigmentation",
+        "link": "https://www.ncbi.nlm.nih.gov/pubmed/34567890"
+      }
+    ]
+  }
+]
     }
   ]
 }]
